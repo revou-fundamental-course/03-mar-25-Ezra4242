@@ -1,0 +1,33 @@
+/* file css*/
+
+.main-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-logo {
+    height: 50px;
+    width: 50px;
+    background-image: url(https://mir-s3-cdn-cf.behance.net/projects/404/a64093101703087.Y3JvcCw1OTA2LDQ2MTksMCw2NDM.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+/* memberikan pengaturan desain pada nav bar */
+nav {
+    display: flex;
+   /* menambah background warna */
+    background-color: #5072ee;
+    overflow: hidden;
+
+
+}
+
+nav>a {
+    padding: 8px;
+    border: 1px solid;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
