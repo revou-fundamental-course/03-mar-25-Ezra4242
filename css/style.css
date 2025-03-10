@@ -1,5 +1,13 @@
 /* file css*/
 
+
+
+body{ font-family: Arial, Helvetica, sans-serif ;
+    /* mewarnai bg */
+    background-image: linear-gradient(45deg, rgb(228, 69, 69), rgb(234, 234, 139), white)}
+
+
+
 .main-header{
     display: flex;
     justify-content: space-between;
@@ -18,11 +26,9 @@
 /* memberikan pengaturan desain pada nav bar */
 nav {
     display: flex;
-   /* menambah background warna */
-    background-color: #5072ee;
+   /* menambah background warna nav bar */
+    background-color: #7790eb;
     overflow: hidden;
-
-
 }
 
 nav>a {
@@ -30,4 +36,36 @@ nav>a {
     border: 1px solid;
     text-decoration: none;
     color: rgb(255, 255, 255);
+}
+
+
+
+.banner-img {
+    border: 1px solid;
+    height: 500px;
+}
+
+.profile-content {
+    border: 1px solid;
+    height: 500px;
+    align-content: center;
+    text-align: center;
+}
+
+.achievement-content {
+    border: 1px solid;
+    height: 500px;
+    align-content: center;
+    text-align: center;
+}
+
+.message-me-content {
+    border: 1px solid;
+    height: 500px;
+    align-content: center;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
 }
