@@ -1,32 +1,29 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Ezra</title>
+    <title>coba</title>
 
 <!-- CSS call -->
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css\style.css">
 <!-- java script call -->
-<script src="script.js"></script>
+<script src="js\script.js"></script>
 </head>
 
 <body>
-    <!-- main header -->
-<header class="main-header">
-<!-- web logo -->
-<div class="main-logo"></div>
-
-
+   <!-- main header -->
+   <header>
+        <!-- web logo -->
+    <div class="main-logo"></div>
 <!-- Navigation bar -->
-<nav>
-<a href="home">Home</a>
-<a href="profile">Profile</a>
-<a href="achievement">Achievement</a>
-<a href="message-me">Message Me</a>
-</nav>
-
+<div class="sidebar">
+    <a class="active" href="#home">Home</a>
+    <a href="#profile">My Profile</a>
+    <a href="#achievement">Achievement</a>
+    <a href="#message-me">Message me</a>
+  </div>
 </header>
-
 <hr />
 
 <!-- isi konten -->
@@ -34,43 +31,47 @@
     <!-- konten Home -->
 <section id="home">
 <header>
-    <h1> My Portofolio </h1>
-    <p> Welcome, this is my portofolio.</p>
+    <button onclick="myFunction()">Try push this button</button>
+    <p id="demo"></p>
+    <p> Ini adalah website percobaan untuk mencoba mengulik html, css dan javascript milik saya.</p>
 </header>
 </section>
-
 <hr />
 
+<!-- Banner Autoslide -->
+<div class="banner-img banner-1"></div>
+<div class="banner-img banner-2"></div>
+<div class="banner-img banner-3"></div>
 
 <!-- isi profile -->
  <section id="profile">
 <header>
 <h1> My Profile</h1>
 </header>
-
 <!-- isi profile 2 -->
 <div class="profile-content">
-    <p>Profile sayadadasdasgidguagd</p>
+    <p>Saya adalah seorang yang senang mencoba hal hal aneh selama dapat dipelajari dan digunakan untuk kebaikan bersama.</p>
+    <p>Disini saya mencoba menggunakan html, javascript, dan CSS dalam membuat halaman ini.</p>
+    <p>Tentu banyak kekurangan karena saya masih pemula, namun akan sangat bermanfaat jika pengunjung sekalian dapat memberikan masukan, baik dalam comment git ataupun lainnya. Terimakasih.</p>
 </div>
  </section>
-
- 
-<!-- banner slide -->
-<div class="banner-img"></div>
-</section>
 
  <!-- isi achievement -->
   <section id="achievement">
  <header>
  <h1>Achievement</h1>
  </header>
-
 <!-- isi achievement 2 -->
+<h2>Sertifikat yang pernah didapat</h2>
 <div class="achievement-content">
-    <p>Achievement sayadadasdasgidguagd</p>
+
+
+
+
+
+
 </div>
  </section>
-
 
  <!-- isi message me -->
   <section id="message-me">
@@ -78,21 +79,72 @@
  <h1>Message me</h1>
  </header>
 
+
 <!-- isi message me 2 -->
-<div class="message-me-content">
-    <p>Message me sayadadasdasgidguagd</p>
+
+<div class="inner-container">
+
+    <div class="form-container">
+        <div class="form">
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Nama:</label>
+                    <input type="text" id="name" name="name">
+                    <div id="nameError" class="error">Name is required</div>
+                </div>
+                <div class="form-group">
+                    <label for="date">Tanggal Lahir:</label>
+                    <input type="date" id="date" name="date">
+                    <div id="dateError" class="error">Date is required</div>
+                </div>
+                <div class="form-group">
+                    <label>Jenis Kelamin:</label>
+                    <div class="radio-group">
+                        <div>
+                            <input type="radio" id="male" name="gender" value="Laki-Laki">
+                            <label for="male" class="radio-label">Laki-Laki</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="female" name="gender" value="Perempuan">
+                            <label for="female" class="radio-label">Perempuan</label>
+                        </div>
+                    </div>
+                    <div id="genderError" class="error">Gender is required</div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Pesan:</label>
+                    <textarea id="message" name="message"></textarea>
+                    <div id="messageError" class="error">Message is required</div>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="info" id="submitted-info">
+            <div class="current-info">
+                <p><strong>Current time: </strong><span id="current-time">-</span></p>
+                <p><strong>Name: </strong><span id="info-name">-</span></p>
+                <p><strong>Tanggal Lahir: </strong><span id="info-date">-</span></p>
+                <p><strong>Jenis Kelamin: </strong><span id="info-gender">-</span></p>
+                <p><strong>Pesan: </strong><span id="info-message">-</span></p>
+            </div>
+        </div>
+    </div>
 </div>
- </section>
+</section>
+</div>
 
+<footer>
+<div class="container">
+<div class="inner-container">
+
+  </section>
+  
 </main>
-
 
 <!-- main footer -->
 <footer>
-<p> &copy; 2025 Portofolio Ezra</p>
+<p> &copy; 2025 Ezra</p>
 </footer>
 
 </body>
-
-
 </html>

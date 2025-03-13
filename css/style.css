@@ -1,71 +1,118 @@
 /* file css*/
 
-
-
-body{ font-family: Arial, Helvetica, sans-serif ;
-    /* mewarnai bg */
-    background-image: linear-gradient(45deg, rgb(228, 69, 69), rgb(234, 234, 139), white)}
-
-
-
-.main-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.main-logo {
+/* memberikan pengaturan desain pada nav bar */
+body {
+    margin: 0;
+    font-family: "Lato", sans-serif;
+  }  
+  .sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+  .sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+  }
+  .sidebar a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  .sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+  }
+  div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+  }
+  /* Pengaturan logo */
+  .main-logo {
     height: 50px;
     width: 50px;
     background-image: url(https://mir-s3-cdn-cf.behance.net/projects/404/a64093101703087.Y3JvcCw1OTA2LDQ2MTksMCw2NDM.jpg);
     background-position: center;
     background-size: cover;
-    border-radius: 50%;
-}
+    position: relative;
+    border-radius: 50%;}
+    
 
-/* memberikan pengaturan desain pada nav bar */
-nav {
-    display: flex;
-   /* menambah background warna nav bar */
-    background-color: #7790eb;
-    overflow: hidden;
-}
+  /* Pengaturan ukuran fleksibel tergantung pada layar */
+  /* kalau layar besar dia melebar */
+  @media screen and (max-width: 4000px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
 
-nav>a {
-    padding: 8px;
-    border: 1px solid;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-}
+    .main-logo {
+        flex-direction: column;
+       }
+  }
+  
+  /* Kalau layar kecil stack atau menyesuaikan */
+  @media screen and (max-width: 400px) {
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+     .main-logo {
+     flex-direction: column;
+    }
+    .banner-img {flex-shrink: unset;}
 
+  }
 
-
+/* pengaturan banner */
 .banner-img {
-    border: 1px solid;
-    height: 500px;
+background-position: center;
+background-size: cover;
+height: 400px;
+width: 100%;
+}
+.banner-1 {
+ background-image:url(https://c4.wallpaperflare.com/wallpaper/108/704/1021/pokemon-charizard-anime-wallpaper-preview.jpg)
+}
+.banner-2 {
+background-image: url(https://c4.wallpaperflare.com/wallpaper/142/751/831/landscape-anime-digital-art-fantasy-art-wallpaper-preview.jpg)
+}
+.banner-3 {
+background-image: url(https://wallpapershome.com/images/pages/pic_h/9970.jpg)
 }
 
+/* pengaturan profile */
 .profile-content {
-    border: 1px solid;
+    border: none;
     height: 500px;
     align-content: center;
     text-align: center;
+    background-color: aquas;
 }
-
+/* pengaturan achievement */
 .achievement-content {
-    border: 1px solid;
+    border:none;
     height: 500px;
+    width: 100%;
     align-content: center;
     text-align: center;
 }
-
+/* pengaturan message */
 .message-me-content {
-    border: 1px solid;
+    border: none;
     height: 500px;
     align-content: center;
     text-align: center;
 }
 
 footer {
-    text-align: center;
-}
+    text-align: center;}
