@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
               messageError.style.display = 'none';
           }
           
-          // If form is valid, update the info panel
+          // kalau form valid, update the info panel
           if (isValid) {
               const infoName = document.getElementById('info-name');
               const infoDate = document.getElementById('info-date');
@@ -127,3 +127,4 @@ document.addEventListener('DOMContentLoaded', function() {
           }
       });
   }})
+
